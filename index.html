@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+  <title>zenith</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+
+  <main class="card">
+    <div class="avatar">Z</div>
+    <h1>zenith</h1>
+    <p class="bio">lost in the moment.</p>
+
+    <div class="links">
+      <a href="https://discord.com/" target="_blank" rel="noopener">Discord</a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener">YouTube</a>
+    </div>
+
+    <div class="music">
+      <button id="play" aria-label="Play music">▶</button>
+      <div class="track">
+        <span>zenith</span>
+        <small>background music</small>
+      </div>
+      <div class="bars"><i></i><i></i><i></i><i></i></div>
+    </div>
+
+    <div class="views">● 001,337 views</div>
+  </main>
+
+  <div class="enter" id="enter">
+    <button id="enterBtn">enter</button>
+  </div>
+
+  <audio id="audio" loop src="assets/music.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
