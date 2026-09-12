@@ -1,48 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#050505">
-  <title>zenith</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#020202"><title>zenith</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="noise"></div>
-  <div class="orb orb-one"></div>
-  <div class="orb orb-two"></div>
+<video id="bgVideo" class="bg-video" autoplay muted loop playsinline>
+  <source src="assets/background.mp4" type="video/mp4">
+</video>
+<div class="bg-fallback"></div>
+<canvas id="particles"></canvas>
+<div class="scanlines"></div>
+<div class="vignette"></div>
 
-  <main class="card">
-    <div class="avatar">Z</div>
-    <h1>zenith</h1>
-    <p class="bio">lost in the moment.</p>
+<section class="gate" id="gate">
+  <div class="gate-inner">
+    <div class="gate-symbol">Z</div>
+    <button id="enter">click to enter</button>
+    <small>zenith.exe</small>
+  </div>
+</section>
 
-    <div class="links">
-      <a href="https://discord.com/" target="_blank" rel="noopener">Discord</a>
-      <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://youtube.com/" target="_blank" rel="noopener">YouTube</a>
+<main class="profile">
+  <div class="topbar"><span>ZENITH</span><span id="clock">00:00:00</span></div>
+  <div class="cover"></div>
+
+  <div class="content">
+    <div class="avatar-wrap">
+      <img class="avatar" src="assets/profile.jpg" alt="zenith" onerror="this.style.display='none';document.querySelector('.avatar-fallback').style.display='grid'">
+      <div class="avatar-fallback">Z</div>
+      <span class="online"></span>
+    </div>
+
+    <h1><span id="typing"></span><span class="cursor">_</span> <span class="verified">✓</span></h1>
+    <p class="handle">@zenith</p>
+    <p class="bio">lost somewhere between reality and the next level.<br><span class="muted">no signal. no limits.</span></p>
+
+    <div class="badges"><span>✦</span><span>◆</span><span>☾</span><span>∞</span></div>
+
+    <div class="discord">
+      <div class="discord-icon">◉</div>
+      <div class="discord-text"><b>zenith</b><small><i></i> online on Discord</small></div>
+      <span class="discord-dot"></span>
+    </div>
+
+    <div class="socials">
+      <a href="https://discord.com/" target="_blank">Discord</a>
+      <a href="https://instagram.com/" target="_blank">Instagram</a>
+      <a href="https://youtube.com/" target="_blank">YouTube</a>
+      <a href="https://x.com/" target="_blank">X</a>
     </div>
 
     <div class="music">
-      <button id="play" aria-label="Play music">▶</button>
-      <div class="track">
-        <span>zenith</span>
-        <small>background music</small>
-      </div>
-      <div class="bars"><i></i><i></i><i></i><i></i></div>
+      <button id="musicBtn">▶</button>
+      <div class="music-info"><strong>zenith.exe</strong><small>background audio</small></div>
+      <div class="eq"><i></i><i></i><i></i><i></i><i></i></div>
     </div>
 
-    <div class="views">● 001,337 views</div>
-  </main>
-
-  <div class="enter" id="enter">
-    <button id="enterBtn">enter</button>
+    <div class="stats">
+      <div><b>001337</b><small>views</small></div>
+      <div><b>online</b><small>status</small></div>
+      <div><b>∞</b><small>mood</small></div>
+    </div>
   </div>
+</main>
 
-  <audio id="audio" loop src="assets/music.mp3"></audio>
-  <script src="script.js"></script>
+<button class="cursor-dot" id="cursorDot"></button>
+<audio id="audio" loop src="assets/music.mp3"></audio>
+<script src="script.js"></script>
 </body>
 </html>

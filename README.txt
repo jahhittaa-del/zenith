@@ -1,15 +1,24 @@
-# Zenith
+ZENITH V2
 
-A small, dark personal profile site inspired by modern bio/profile pages.
+Included:
+- Click-to-enter screen
+- Animated typing username
+- Custom cursor
+- Particle field
+- Optional background video
+- Profile image placeholder
+- Discord-style online status card
+- Music player
+- Animated equalizer
+- Scanline/vignette effects
+- Live clock
+- Responsive design
 
-## Customize
-- Change the username, bio, and links in `index.html`.
-- Put your own music file at `assets/music.mp3`.
-- Change colors/effects in `style.css`.
-- Replace the `Z` avatar with an image if desired.
+Add your media:
+assets/profile.jpg     = profile picture
+assets/background.mp4  = background video
+assets/music.mp3       = music
 
-## Run locally
-Open `index.html` in a browser.
+If you don't add background.mp4/profile.jpg/music.mp3, the site still loads with fallbacks.
 
-## Publish
-Upload the folder to GitHub Pages, Cloudflare Pages, or another static hosting service.
+Change links/text in index.html. Publish with GitHub Pages, Cloudflare Pages, or Vercel.
